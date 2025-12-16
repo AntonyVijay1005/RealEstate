@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from './Navbar'
+import Login from './Login'
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      <div className='navbar'><Navbar /></div>
+      <div className='login'><Login/></div>
+    </div>
   )
 }
 
