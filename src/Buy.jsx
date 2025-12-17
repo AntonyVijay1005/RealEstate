@@ -21,9 +21,9 @@ const [details,setDetails] = useState([]);
 
   return (
     <>
-    <div className='navbar'><Navbar /></div>
+    <Navbar />
     
-    <div className='d-flex my-3 justify-content-around' style={{"backgroundColor":"whitesmoke","width":"80%","margin-left":"180px","border-radius":"10px"}}>
+    <div className='d-flex  justify-content-around' style={{"backgroundColor":"whitesmoke","width":"80%","margin-left":"180px","margin-top":"100px","border-radius":"10px"}}>
         <div>
             <p>Location</p>
             <input type="text" placeholder="e.g, 'chennai' '623501'" name="" id="" className='form-control  border-gray-400 border-2' />
@@ -51,7 +51,7 @@ const [details,setDetails] = useState([]);
 
   
 
-  <div className="card" key={detail.id} style={{"width": "18rem"}}>
+  <div className="card my-5" key={detail.id} style={{"width": "18rem"}}>
   <img src={detail.image} className="card-img-top" alt="..."/>
   <div className="card-body">
     

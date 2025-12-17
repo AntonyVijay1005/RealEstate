@@ -3,14 +3,14 @@ import Navbar from './Navbar'
 import Login from './Login'
 import Buy from './Buy'
 import apartment1 from './assets/room3.jpeg'
-import apartment2 from './assets/room7.jpeg'
-import apartment3 from './assets/room4.jpeg';
+import apartment2 from './assets/room10.jpeg'
+import apartment3 from './assets/room9.jpeg';
 function App() {
   return (
     <div className='app-bg'>
-      <div className='navbar '><Navbar /></div>
+      <Navbar />
 
-<div
+   <div
       id="carouselExampleInterval"
       className="carousel slide "
       data-bs-ride="carousel"

@@ -1,12 +1,15 @@
-.navbar{
+.navbar-fixed{
 
   height:80px;
   width:100%;
-  background-color: rgb(255, 255, 236);
+  background-color: rgb(255, 255, 236) !important;
   border-radius: 10px;
-  
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
- 
+  
+  position: fixed;
+  top:0;
+  z-index: 1000;
+  align-items: center;
 }
 
 .app-bg{
@@ -22,12 +25,12 @@
 
 .login{
 
-  border: 3px solid ;
-  border-radius: 10px;
+  border: 0px solid black ;
+  border-radius: 20px;
   margin-top:100px;
   margin-left:500px;
-  background: linear-gradient(135deg, #ffe0b2, #fff3e0);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: blanchedalmond;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .prop-img{
@@ -44,6 +47,7 @@
   width:500px;
   background-color: blanchedalmond;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
