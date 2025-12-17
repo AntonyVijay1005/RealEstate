@@ -1,11 +1,15 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 function Login() {
   return (
 
-    <div>
+<>
+    <div className='navbar'><Navbar /></div> 
+    
+    <div className='bg'>
         
-        <div className='shadow' style={{width:"30%", margin:"auto"}}>
+        <div className='login shadow' style={{width:"30%","background-color":"white"}}>
        
         <form className="my-5" style={{width:"50%", margin:"auto"}}>
             <h4 style={{"color":"green"}} className='ms-5 my-5'>Login</h4>
@@ -16,6 +20,7 @@ function Login() {
 
          </div>
     </div>
+  </>
   )
 }
 

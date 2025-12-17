@@ -1,0 +1,52 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Modern Villa in Hills",
+      "image": "/Images/apartment1.jpeg",
+      "beds": 5,
+      "baths": 5,
+      "area": 2500
+    },
+    {
+      "id": 2,
+      "title": "Luxury Apartment City View",
+      "image": "/Images/apartment2.jpeg",
+      "beds": 3,
+      "baths": 2,
+      "area": 1800
+    },
+    {
+      "id": 3,
+      "title": "Cozy Family Home",
+      "image": "/Images/apartment3.jpeg",
+      "beds": 4,
+      "baths": 3,
+      "area": 2100
+    },
+    {
+      "id": 4,
+      "title": "Premium Beachside Villa",
+      "image": "/Images/aprtment4.jpeg",
+      "beds": 6,
+      "baths": 6,
+      "area": 3200
+    },
+    {
+      "id": 5,
+      "title": "Affordable Studio Apartment",
+      "image": "/Images/apartment2.jpeg",
+      "beds": 1,
+      "baths": 1,
+      "area": 600
+    },
+    {
+      "id": 6,
+      "title": "Duplex Home with Garden",
+      "image": "/Images/apartment1.jpeg",
+      "beds": 3,
+      "baths": 3,
+      "area": 2000
+    }
+  ]
+}
