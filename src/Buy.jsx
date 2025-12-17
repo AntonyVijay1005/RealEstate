@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
+import { useNavigate } from 'react-router-dom';
 
 
 function Buy() {
 
+const navigate = useNavigate();
 
 const [details,setDetails] = useState([]);
 
@@ -65,7 +67,7 @@ const [details,setDetails] = useState([]);
     </div>
 
     <div>
-      <a href="#" className="btn btn-primary">View Property</a>
+      <button onClick={()=>navigate('/property/'+detail.id)} className="btn btn-primary" >View Property</button>
     </div>
 
   </div>

@@ -48,5 +48,63 @@
       "baths": 3,
       "area": 2000
     }
+  ],
+
+  "apartments": [
+    {
+      "id": 1,
+      "ApartmentName": "MySills Residency",
+      "location": "Mannivakkam, Chennai",
+      "RoomCount": "3 BHK",
+      "UnitSizes": "2000 sq ft",
+      "TotalArea": "0.5 acres"
+    },
+    {
+      "id": 2,
+      "ApartmentName": "Green Vista Homes",
+      "location": "Tambaram, Chennai",
+      "RoomCount": "2 BHK",
+      "UnitSizes": "1350 sq ft",
+      "TotalArea": "0.8 acres"
+    },
+    {
+      "id": 3,
+      "ApartmentName": "Skyline Heights",
+      "location": "Velachery, Chennai",
+      "RoomCount": "4 BHK",
+      "UnitSizes": "2800 sq ft",
+      "TotalArea": "1.2 acres"
+    },
+    {
+      "id": 4,
+      "ApartmentName": "Lakeview Apartments",
+      "location": "Medavakkam, Chennai",
+      "RoomCount": "3 BHK",
+      "UnitSizes": "1850 sq ft",
+      "TotalArea": "0.6 acres"
+    },
+    {
+      "id": 5,
+      "ApartmentName": "Urban Nest",
+      "location": "Porur, Chennai",
+      "RoomCount": "2 BHK",
+      "UnitSizes": "1200 sq ft",
+      "TotalArea": "0.4 acres"
+    },
+    {
+      "id": 6,
+      "ApartmentName": "Elite Orchid Villas",
+      "location": "OMR, Chennai",
+      "RoomCount": "5 BHK",
+      "UnitSizes": "3500 sq ft",
+      "TotalArea": "2 acres"
+    }
   ]
+
+
+
 }
+
+
+ 
+

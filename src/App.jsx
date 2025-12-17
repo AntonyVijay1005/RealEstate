@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from './Navbar'
 import Login from './Login'
 import Buy from './Buy'
-import apartment1 from './assets/apartment1.jpeg'
-import apartment2 from './assets/apartment2.jpeg'
-import apartment3 from './assets/apartment3.jpeg';
+import apartment1 from './assets/room3.jpeg'
+import apartment2 from './assets/room7.jpeg'
+import apartment3 from './assets/room4.jpeg';
 function App() {
   return (
     <div className='app-bg'>

@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     element:<Buy/>
   },
   {
-    path:'/property',
+    path:'/property/:id',
     element:<Property/>
   }
 ])
