@@ -25,10 +25,12 @@ function Property() {
 
         <Navbar />
 
-        <div className=' d-flex flex-wrap p-5 my-5'>
-            <img src={room3} className='prop-img p-5' />
+        <div className='container d-flex flex-wrap p-5 my-5'>
+             
+            <div className='row'>
+              <img src={room3} className='col prop-img p-5' />
 
-            <div className='prop-details mx-5 my-3 '>
+            <div className='col prop-details mx-5 my-3 '>
 
                 <h4>{apartment.ApartmentName}</h4>
                 <h5><i className="bi bi-geo-alt-fill"></i>{apartment.location}</h5>
@@ -40,6 +42,8 @@ function Property() {
 
                 
             </div>
+            </div>
+            
         </div>
     </div>
   )
