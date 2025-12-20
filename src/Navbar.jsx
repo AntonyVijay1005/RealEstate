@@ -19,26 +19,26 @@ function Navbar() {
     // </div>
 
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid p-2 rounded shadow ">
+    <nav className="navbar navbar-expand-md bg-body-tertiary" style={{position:"sticky",zIndex:100,marginTop:"0px",width:"100%"}}>
+  <div className="container-fluid p-3 rounded shadow" >
 
-    <a class="navbar-brand" href="#"><i className=" mx-3 bi bi-house-door-fill" ></i> Rently & Co </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <a className="navbar-brand" href="#"><i className=" mx-3 bi bi-house-door-fill" ></i> Rently & Co </a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div className="collapse navbar-collapse" id="navbarNavDropdown">
       
-      <ul class="navbar-nav">
+      <ul className="navbar-nav">
         
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" onClick={()=>navigate('/')}>Home</a>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" onClick={()=>navigate('/')}>Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" onClick={()=>navigate('/buy')} >Buy</a>
+        <li className="nav-item">
+          <a className="nav-link" onClick={()=>navigate('/buy')} >Buy</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Rent</a>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Rent</a>
         </li>
         
       </ul>

@@ -1,26 +1,6 @@
-.navbar-fixed{
-
-  height:80px;
-  width:100%;
-  background-color: rgb(255, 255, 236) !important;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  
-  position: fixed;
-  top:0;
-  z-index: 1000;
-  align-items: center;
-}
-
-.app-bg{
-  background-color: rgb(227, 223, 223);
-  width: 100%;
-  min-height: 100vh;
-}
 
 .bg{
   background-color: white;
-   min-height: 100vh;
 }
 
 .login{
@@ -35,7 +15,7 @@
 
 .prop-img{
 
-  height: 500px;
+  
   border-radius: 20px;
 }
 
@@ -43,8 +23,7 @@
 
   border: 0px solid black;
   border-radius: 20px;
-  height : 500px;
-  width:500px;
+ 
   background-color: blanchedalmond;
   display: flex;
   flex-wrap: wrap;

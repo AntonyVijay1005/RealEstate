@@ -7,6 +7,9 @@ function Buy() {
 
 const navigate = useNavigate();
 
+const [type,setType]=useState("");
+const [locations,setLocations] = useState("");
+
 const [details,setDetails] = useState([]);
 
 
@@ -20,53 +23,25 @@ const [details,setDetails] = useState([]);
   },[]);
 
 
+  const filters = details.filter((detail)=>
+
+
+    detail.title.toLowerCase().includes(type.toLowerCase()) &&
+    detail.location.toLowerCase().includes(locations.toLowerCase())
+    
+
+
+)
+
+
 
   return (
     <>
+
     <Navbar />
-    
-    {/* <div className='container d-flex justify-content-around' style={{"backgroundColor":"whitesmoke","width":"80%","margin-left":"180px","margin-top":"100px","border-radius":"10px"}}>
-        <div>
-            <p>Location</p>
-            <input type="text" placeholder="e.g, 'chennai' '623501'" name="" id="" className='form-control  border-gray-400 border-2' />
-        </div>
-
-        <div>
-            <p>Price Range</p>
-            <input type="text" placeholder='e.g, $200 - $400' className='form-control border-gray-400 border-2'/>
-        </div>
-
-        <div>
-            <p>Property-Type</p>
-            <input type="text" placeholder='e.g, Apartment' className='form-control border-gray-400 border-2'/>
-        </div>
-
-        <button className='btn btn-primary px-5 my-3' style={{"height":"50px"}}>Search</button>
-    </div>
 
 
-    <div className='container  m-2 ' style={{"backgroundColor":"whitesmoke"}}>
-
-        <div className='row'>
-            
-            <p className='col-lg-1 col-sm-3 m-1'>Location</p>
-            <p className='col-lg-1 col-sm-3 m-1'>Location</p>
-            <p className='col-lg-1 col-sm-3 m-1'>Location</p>
-            
-        </div>
-
-        <div className='row d-flex'>
-            
-            
-            <input type="text" placeholder="e.g, 'chennai' '623501'" name="" id="" className='col-lg-3 col-sm-3 m-2 form-control  border-gray-400 border-2' />
-            <input type="text" placeholder="e.g, 'chennai' '623501'" name="" id="" className='col-lg-3 col-sm-3 m-2 form-control  border-gray-400 border-2' />
-            <input type="text" placeholder="e.g, 'chennai' '623501'" name="" id="" className='col-lg-3 col-sm-3 m-2 form-control  border-gray-400 border-2' />
-            
-        </div>
-
-    </div> */}
-
-    <div className="container">
+    <div className="container mt-5">
   <div className="row bg-light  rounded align-items-end">
 
     <div className="col-12 col-md-6 col-lg-3 mb-3">
@@ -75,6 +50,7 @@ const [details,setDetails] = useState([]);
         type="text"p-4
         placeholder="e.g, 'Chennai' '623501'"
         className="form-control border-2 border-secondary"
+        onChange={(e)=>setLocations(e.target.value)}
       />
     </div>
 
@@ -93,6 +69,7 @@ const [details,setDetails] = useState([]);
         type="text"
         placeholder="e.g, Apartment"
         className="form-control border-2 border-secondary"
+        onChange={(e)=>setType(e.target.value)}
       />
     </div>
 
@@ -106,12 +83,12 @@ const [details,setDetails] = useState([]);
 </div>
 
 
-<div className='d-flex flex-wrap justify-content-center gap-4'>
+ <div className='d-flex flex-wrap justify-content-center gap-4'>
 
-{details.length > 0 ? (
+{filters.length > 0 ? (
 
 
-  details.map((detail)=>(
+  filters.map((detail)=>(
 
   
 
@@ -131,7 +108,9 @@ const [details,setDetails] = useState([]);
     </div>
 
     <div>
-      <button onClick={()=>navigate('/property/'+detail.id)} className="btn btn-primary" >View Property</button>
+        <p><i class="bi bi-geo-alt-fill"></i> {detail.location}</p>
+        <p><i class="bi bi-currency-rupee"></i> {detail.price}</p>
+      <button onClick={()=>navigate('/property/'+ detail.id)} className="btn btn-primary" >View Property</button>
     </div>
 
   </div>
@@ -144,7 +123,7 @@ const [details,setDetails] = useState([]);
 
               ) : (
 
-                <div>Loading...</div>
+                <div>No Data Found...</div>
               
               )}
                   

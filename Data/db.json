@@ -6,6 +6,8 @@
       "image": "/Images/apartment1.jpeg",
       "beds": 5,
       "baths": 5,
+       "location": "Mannivakkam, Chennai",
+       "price":6000000,
       "area": 2500
     },
     {
@@ -14,6 +16,8 @@
       "image": "/Images/apartment2.jpeg",
       "beds": 3,
       "baths": 2,
+      "location": "Tambaram, Chennai",
+      "price":2000000,
       "area": 1800
     },
     {
@@ -22,6 +26,8 @@
       "image": "/Images/apartment3.jpeg",
       "beds": 4,
       "baths": 3,
+      "location": "Velachery, Chennai",
+      "price":5000000,
       "area": 2100
     },
     {
@@ -30,6 +36,8 @@
       "image": "/Images/aprtment4.jpeg",
       "beds": 6,
       "baths": 6,
+       "location": "Medavakkam, Chennai",
+       "price":3000000,
       "area": 3200
     },
     {
@@ -38,6 +46,8 @@
       "image": "/Images/apartment2.jpeg",
       "beds": 1,
       "baths": 1,
+      "location": "Porur, Chennai",
+      "price":4000000,
       "area": 600
     },
     {
@@ -46,6 +56,8 @@
       "image": "/Images/apartment1.jpeg",
       "beds": 3,
       "baths": 3,
+      "location": "OMR, Chennai",
+      "price":4000000,
       "area": 2000
     }
   ],

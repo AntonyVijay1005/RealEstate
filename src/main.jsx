@@ -10,7 +10,8 @@ import Login from './Login.jsx';
 import Buy from './Buy.jsx';
 import Property from './Property.jsx';
 import Signup from './Signup.jsx';
-
+import Search from './Search.jsx';
+import Reactangle from './Reactangle.jsx';
 const router = createBrowserRouter([
   {
     path:'/',
@@ -31,6 +32,14 @@ const router = createBrowserRouter([
   {
     path:'/property/:id',
     element:<Property/>
+  },
+  {
+    path:'/search',
+    element:<Search />
+  },
+  {
+    path:"/rect",
+    element:<Reactangle/>
   }
 ])
 createRoot(document.getElementById('root')).render(
