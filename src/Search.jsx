@@ -9,10 +9,11 @@ const navigate = useNavigate();
 
 const [type,setType]=useState("");
 const [locations,setLocations] = useState("");
+const [range,setRange] = useState("");
 
 const [details,setDetails] = useState([]);
 
-
+console.log(range);
 
   useEffect(()=>{
 
@@ -25,12 +26,10 @@ const [details,setDetails] = useState([]);
 
   const filters = details.filter((detail)=>
 
-
     detail.title.toLowerCase().includes(type.toLowerCase()) &&
-    detail.location.toLowerCase().includes(locations.toLowerCase())
-    
-
-
+    detail.location.toLowerCase().includes(locations.toLowerCase()) &&
+    detail.price < range
+  
 )
 
 
@@ -54,14 +53,7 @@ const [details,setDetails] = useState([]);
       />
     </div>
 
-    <div className="col-12 col-md-6 col-lg-3 mb-3">
-      <p className="mb-1">Price Range</p>
-      <input
-        type="text"
-        placeholder="e.g, ₹20L - ₹40L"
-        className="form-control border-2 border-secondary"
-      />
-    </div>
+    
 
     <div className="col-12 col-md-6 col-lg-3 mb-3">
       <p className="mb-1">Property Type</p>
@@ -74,7 +66,14 @@ const [details,setDetails] = useState([]);
     </div>
 
     <div className="col-12 col-md-6 col-lg-3 mb-3 d-grid">
-      <button className="btn btn-primary py-2">
+      
+       <p className='bg-green'><b>Price Upto :</b> {range}</p> 
+            <input type="range" value={range} onChange={(e)=>setRange(e.target.value)}class="form-range" min="0" max="10000000" step="0.5" id="customRange3"></input>
+               
+      
+    </div>
+    <div className="col-12 col-md-6 col-lg-3 mb-3 d-grid">
+    <button className="btn btn-primary py-2">
         Search
       </button>
     </div>
@@ -108,8 +107,8 @@ const [details,setDetails] = useState([]);
     </div>
 
     <div>
-        <p><i class="bi bi-geo-alt-fill"></i> {detail.location}</p>
-        <p><i class="bi bi-currency-rupee"></i> {detail.price}</p>
+        <p><i className="bi bi-geo-alt-fill"></i> {detail.location}</p>
+        <p><i className="bi bi-currency-rupee"></i> {detail.price}</p>
       <button onClick={()=>navigate('/property/'+ detail.id)} className="btn btn-primary" >View Property</button>
     </div>
 
