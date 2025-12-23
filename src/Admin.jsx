@@ -34,8 +34,14 @@ function Admin() {
     <Navbar/>
 
 
-    {/* Displaying Table data from json db */}
+    
 
+    <div className='d-flex justify-content-end me-4'>
+      <button onClick={()=>navigate("/add")} className='btn btn-success my-3 ms-auto'style={{width:"200px"}}> Add New Property</button>
+      
+    </div>
+
+{/* Displaying Table data from json db */} 
     <div>
 
      <table className="table table-striped">
@@ -84,10 +90,7 @@ function Admin() {
 
 
 
-    <div className='d-flex justify-content-end flex-column'>
-      <button onClick={()=>navigate("/add")} className='btn btn-success my-3 ms-auto'style={{width:"200px"}}> Add New Property</button>
-      <button className='btn btn-danger ms-auto'style={{width:"200px"}}> Delete Property</button>
-    </div>
+    
 
     </>
   )

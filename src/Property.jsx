@@ -19,6 +19,47 @@ function Property() {
 
   },[]);
 
+  
+  
+      const [property,setProperty] = useState({
+          title: "",
+    beds: "",
+    baths: "",
+    location: "",
+    price: "",
+    area: "",
+    image: ""
+      });
+  
+      useEffect(()=>{
+  
+          fetch(`http://localhost:3000/properties/${id}`)
+          .then((res)=>{return res.json()})
+          .then((data)=>setProperty(data))
+          .catch((error)=>console.log(error.message))
+      },[id])
+
+  {/* predictedPrice = currentPrice + (currentPrice × growthRate × years) */}
+  
+  const [rate,setRate] = useState(0);
+
+  const handleChange = (e)=>{
+
+    setRate(Number(e.target.value)/100)
+  }
+  
+
+  
+  const currentPrice = Number(property.price);
+  const [predicted_price , setPredicted_price]  = useState(0);
+  const price = currentPrice + (currentPrice * rate * 5);
+  
+  const predict =()=>
+  {
+      
+      setPredicted_price(price);
+  }
+   
 
   return (
     <div>
@@ -29,13 +70,13 @@ function Property() {
              
             <div className='row'>
 
-            <div className='col-12 col-md-6 col-lg-6 d-flex'>
-              <img src={room3} className='prop-img w-100 h-100 rounded p-3' />
+            <div className='col-12 col-md-6 col-lg-5 d-flex'>
+              <img src={room3} className='prop-img w-100 h-100 p-3' />
             </div>
             
-            <div className='col-12 col-md-6 col-lg-6 prop-details '>
+            <div className='col-12 col-md-6 col-lg-5 prop-details '>
 
-                <h4>{apartment.ApartmentName}</h4>
+                <h4 >{apartment.ApartmentName}</h4>
                 <h5><i className="bi bi-geo-alt-fill"></i>{apartment.location}</h5>
                 <h5><i className="bi bi-lamp"></i>Room Count:  {apartment.RoomCount}</h5>
                 <h5><i className="bi bi-buildings"></i>Unit Sizes : {apartment.UnitSizes}</h5>
@@ -47,7 +88,22 @@ function Property() {
             </div>
             </div>
             
+        
+
+      <div className='row mt-5 d-flex justify-content-center'>
+
+      
+        <div className='col-12 col-md-6 col-lg-6 predict p-3 border border-2 shadow d-flex  rounded d-flex flex-column  justify-content-center align-item-center' style={{backgroundColor:"white",height:"300px" ,width:"600px"}}>
+
+              <h2>Estimated <span className='text-success'>Price</span>    </h2>
+               <input className='mt-4' type="number" placeholder='Enter Number of Years to find the predicted price' name="rate" onChange={handleChange} />
+              <h4 className='mt-4 text-primary d-flex justify-content-center' ><i className="bi bi-currency-rupee"></i>{predicted_price}</h4>
+              <button className='btn btn-primary mt-4' onClick={()=>predict()}>Predict now</button>
         </div>
+
+        </div>
+        </div>
+      
     </div>
   )
 }

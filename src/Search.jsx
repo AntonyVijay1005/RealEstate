@@ -9,7 +9,7 @@ const navigate = useNavigate();
 
 const [type,setType]=useState("");
 const [locations,setLocations] = useState("");
-const [range,setRange] = useState("");
+const [range,setRange] = useState(10000000);
 
 const [details,setDetails] = useState([]);
 
@@ -68,7 +68,7 @@ console.log(range);
     <div className="col-12 col-md-6 col-lg-3 mb-3 d-grid">
       
        <p className='bg-green'><b>Price Upto :</b> {range}</p> 
-            <input type="range" value={range} onChange={(e)=>setRange(e.target.value)}class="form-range" min="0" max="10000000" step="0.5" id="customRange3"></input>
+        <input type="range" value={range} onChange={(e)=>setRange(e.target.value)}class="form-range" min="0" max="10000000" step="0.5" id="customRange3"></input>
                
       
     </div>
