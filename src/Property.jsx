@@ -70,7 +70,7 @@ function Property() {
              
             <div className='row'>
 
-            <div className='col-12 col-md-6 col-lg-5 d-flex'>
+            <div className='col-12 col-md-6 col-lg-6 d-flex'>
               <img src={room3} className='prop-img w-100 h-100 p-3' />
             </div>
             

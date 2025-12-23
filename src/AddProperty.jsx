@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import Navbar from './Navbar';
 
 function AddProperty() {
 
@@ -84,10 +85,13 @@ const handleImage = (e) => {
 
 
   return (
-    <div>
+    <div >
+      <Navbar/>
+      <div className='d-flex justify-content-center p-5'  >
 
-        <form className="my-5" style={{width:"40%", margin:"auto"}}>
-           <h4 className='ms-5 mb-4'>Add Property</h4>
+        <form className="add-form p-5" style={{width:"400px",margin:"auto"}}>
+           <h4 className='ms-5 mb-4'>Add <span className='text-primary'>Property</span> </h4>
+           
            <label htmlFor="">Title :</label> <input onChange={handleChange} name="title" type="text" className='form-control my-3' placeholder='Enter Property Name' />
            <label htmlFor="">Beds Count :</label> <input  onChange={handleChange} name="beds" type="text" className='form-control my-3' placeholder='Enter Number of bedrooms' />
            <label htmlFor="">Baths Count :</label> <input  onChange={handleChange}  name="baths" type="text" className='form-control my-3' placeholder='Enter Number of bathrooms' />
@@ -95,12 +99,12 @@ const handleImage = (e) => {
            <label htmlFor="">Price :</label><input  onChange={handleChange} name="price" type="text" className='form-control my-3' placeholder='Enter Price of property'/>
            <label htmlFor="">Area :</label> <input  onChange={handleChange} name="area" type="text" className='form-control my-3' placeholder='Enter Total Area of property'/>
            <label htmlFor="">Image :</label> 
-           {/*  */}
+           
             <input type="file" accept="image/*"className="form-control my-3"onChange={handleImage}/>
 
            <button onClick={handleSubmit}  className='btn btn-primary w-100'>Submit</button>
         </form>
-
+     </div>
     </div>
   )
 }

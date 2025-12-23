@@ -20,6 +20,7 @@ function Navbar() {
 
 
     <nav className="navbar navbar-expand-md bg-body-tertiary" style={{position:"sticky",zIndex:100,marginTop:"0px",width:"100%"}}>
+ 
   <div className="container-fluid p-3 rounded shadow" >
 
     <a className="navbar-brand" href="#"><i className=" mx-3 bi bi-house-door-fill" ></i> Rently & Co </a>
@@ -32,19 +33,32 @@ function Navbar() {
       <ul className="navbar-nav">
         
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" onClick={()=>navigate('/')}>Home</a>
+          <a className="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" onClick={()=>navigate('/buy')} >Buy</a>
+          <a className="nav-link" href="/buy">Buy</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Rent</a>
+          <a className="nav-link" href="/admin">Admin</a>
+        </li>
+
+        <li >
+      
+      
+
         </li>
         
       </ul>
+      <div className='d-flex ms-auto'>
+      <i class="bi bi-person-circle fs-4 "></i>
+      <p className='text-success ms-3 mt-1'>Antony Vijay S</p>
+      </div>
+
+      
 
 
     </div>
+    
   </div>
 </nav>
   )
